@@ -20,7 +20,7 @@ public abstract class AnimalBase implements Animal {
     public TipoAnimal getTipo() {
         return tipo;
     }
-
+    //polimorfismo
     @Override
     public String hacerSonido() {
         return sonido;
@@ -30,6 +30,19 @@ public abstract class AnimalBase implements Animal {
     public String toString() {
         return nombre + " - " + tipo + " - Sonido: " + hacerSonido();
     }
+
+    public boolean esVolador() {
+        return this.tipo == TipoAnimal.VOLADOR;
+    }
+
+    public boolean esTerrestre() {
+        return this.tipo == TipoAnimal.TERRESTRE;
+    }
+
+    public boolean esAcuatico() {
+        return this.tipo == TipoAnimal.ACUATICO;
+    }
+
 
 
 }
